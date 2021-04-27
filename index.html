@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="styles/reset.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+        <title>Etch-A-Sketch</title>
+    </head>
+    <body>
+        <main>
+            <section id="etchMachine">
+                <div id="etchMachineBorder">
+                    <h1>Etch-A-Sketch</h1>
+                    <div id="etchMachineGrid"></div>
+                </div>
+            </section>
+            <section id="etchControls">
+                <h2>Game Settings</h2>
+                <div id="etchControls-penColor">
+                    <span>Pen Color</span>
+                    <div class="color-picker-wrapper" id="pen-color-picker-wrapper">
+                        <input type="color" id="pen-color-picker" name="pen-color" class="color-picker" value="#000000">
+                    </div>
+                </div>
+                <div id="etchControls-backgroundColor">
+                    <span>Background Color</span>
+                    <div class="color-picker-wrapper" id="background-color-picker-wrapper">
+                        <input type="color" id="background-color-picker" name="background-color" class="color-picker" value="#FFFFFF">
+                    </div>
+                </div>
+                <div id="etchControls-gridSize">
+                    <span>Grid Size</span>
+                    <input type="range" min="12" max="60" step="12" id="gridSizeInput" value="36" 
+                    oninput="document.getElementById('gridSizeInputLabel').innerHTML = `${this.value} x ${this.value}`" />
+                    <label for="gridSizeInput" id="gridSizeInputLabel">36 X 36</label>
+                </div>
+                <div id="etchControls-clearBtn">
+                    <button id="reset-button">reset</button>
+                </div>
+            </section>
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
